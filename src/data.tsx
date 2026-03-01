@@ -13,6 +13,9 @@ import {
   Activity
 } from 'lucide-react';
 
+// 部署到 GitHub Pages 子路径时，图片必须带 base（如 /zyh-CV/），否则会 404
+const base = typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env.BASE_URL : '/';
+
 export const profile = {
   name: "臧雨晗",
   title: "B端 / AI 产品经理",
@@ -20,7 +23,7 @@ export const profile = {
   email: "zyhzzy612315@126.com",
   phone: "17606271715",
   address: "北京市海淀区学院路30号",
-  avatar: "/images/avatar.jpg", // 将你的头像命名为 avatar.jpg 放到 public/images/ 文件夹
+  avatar: `${base}images/avatar.jpg`,
   about: "担任辩论队队长与研究生会主席，具备逻辑思维与沟通能力；掌握 Axure、X-mind 及 Excel、SQL、Stata、Spss 等数据分析工具，支撑产品决策与发展路径；学业成绩位居专业前 5%；系统学习美团公开产品课程，搭建知识框架。"
 };
 
@@ -94,7 +97,7 @@ export const projects = [
     title: "AI寻才（PC端）",
     category: "internship",
     role: "B端产品经理",
-    image: "/images/project-1.jpg",
+    image: `${base}images/project-1.jpg`,
     tags: ["AI+RPA", "B端", "降本增效"],
     summary: "通过AI+RPA自动化工具解决简历筛选低效问题，目标节省HR 60%时间。上线以来累计抓取简历51192份。",
     details: [
@@ -121,7 +124,7 @@ export const projects = [
     title: "360测评（PC端）",
     category: "internship",
     role: "B端产品经理",
-    image: "/images/project-2.jpg",
+    image: `${base}images/project-2.jpg`,
     tags: ["系统重构", "权限管理", "数据分析"],
     summary: "重构360测评系统，实现对员工的全方位评估管理。支持1000人并发使用，预估总人数达5000+。",
     details: [
@@ -148,7 +151,7 @@ export const projects = [
     title: "智能汇报（移动端+PC端）",
     category: "internship",
     role: "B端产品经理",
-    image: "/images/project-3.jpg",
+    image: `${base}images/project-3.jpg`,
     tags: ["AI工作流", "移动端", "效率工具"],
     summary: "针对周报效率痛点，搭建AI问一问工作流与汇报模板体系。汇报使用满意度3.3+，周活PV达200+。",
     details: [
@@ -175,7 +178,7 @@ export const projects = [
     title: "程风起（采购平台）",
     category: "internship",
     role: "B端产品经理",
-    image: "/images/project-4.jpg",
+    image: `${base}images/project-4.jpg`,
     tags: ["电商交易", "流程设计", "GMV增长"],
     summary: "全流程负责礼品卡、二手商品、贩卖机专项。PC端改版后GMV达89万+。",
     details: [
@@ -198,7 +201,7 @@ export const projects = [
     title: "熊猫玉茶",
     category: "campus",
     role: "第一负责人",
-    image: "/images/project-5.jpg",
+    image: `${base}images/project-5.jpg`,
     tags: ["三创省一", "品牌孵化", "全渠道运营"],
     summary: "第十三届全国大学生电子商务创新、创意及创业挑战赛省级一等奖。锚定“茶+萌”破圈方向，实现全渠道拉新。",
     details: [
@@ -225,7 +228,7 @@ export const projects = [
     title: "红色战旗基因的时代传承",
     category: "campus",
     role: "第一负责人",
-    image: "/images/project-6.jpg",
+    image: `${base}images/project-6.jpg`,
     tags: ["挑战杯省二", "乡村振兴", "深度调研"],
     summary: "第十八届“挑战杯”红色专项省级二等奖。输出3万字调研报告，方案被多家媒体报道。",
     details: [
@@ -248,7 +251,7 @@ export const projects = [
     title: "经济管理学院 研究生会主席",
     category: "campus",
     role: "主席",
-    image: "/images/project-7.jpg",
+    image: `${base}images/project-7.jpg`,
     tags: ["组织管理", "活动策划", "学术赛事"],
     summary: "统筹研会招新与迎新全流程，牵头承办“学术三分钟”等学术赛事。",
     details: [
@@ -263,7 +266,7 @@ export const projects = [
     title: "商业协会 会长",
     category: "campus",
     role: "会长",
-    image: "/images/project-8.jpg",
+    image: `${base}images/project-8.jpg`,
     tags: ["团队领导", "赛事举办", "影响力建设"],
     summary: "负责商业协会招新宣传，举办省级商业比赛，参加人数达1000+人次。",
     details: [
@@ -276,12 +279,12 @@ export const projects = [
 ];
 
 export const awards = [
-  { title: "国家励志奖学金", image: "/images/award-1.jpg" },
-  { title: "四川省优秀毕业生", image: "/images/award-2.jpg" },
-  { title: "ACCA", image: "/images/award-3.jpg" },
-  { title: "社科奖全国高校市场营销大赛国家级一等奖", image: "/images/award-4.jpg" },
-  { title: "全国高校商业精英挑战赛国家级一等奖", image: "/images/award-5.jpg" },
-  { title: "全国大学生电子商务创新、创意及创业挑战赛省级一等奖", image: "/images/award-6.jpg" },
-  { title: "\"挑战杯\"全国大学生课外学术科技作品竞赛省级二等奖", image: "/images/award-7.jpg" },
-  { title: "\"正大杯\"市场调查与分析大赛省级三等奖", image: "/images/award-8.jpg" }
+  { title: "国家励志奖学金", image: `${base}images/award-1.jpg` },
+  { title: "四川省优秀毕业生", image: `${base}images/award-2.jpg` },
+  { title: "ACCA", image: `${base}images/award-3.jpg` },
+  { title: "社科奖全国高校市场营销大赛国家级一等奖", image: `${base}images/award-4.jpg` },
+  { title: "全国高校商业精英挑战赛国家级一等奖", image: `${base}images/award-5.jpg` },
+  { title: "全国大学生电子商务创新、创意及创业挑战赛省级一等奖", image: `${base}images/award-6.jpg` },
+  { title: "\"挑战杯\"全国大学生课外学术科技作品竞赛省级二等奖", image: `${base}images/award-7.jpg` },
+  { title: "\"正大杯\"市场调查与分析大赛省级三等奖", image: `${base}images/award-8.jpg` }
 ];
