@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* PRD 视觉规范 - 科技人文主义 */
+@theme {
+  /* 色彩系统 */
+  --color-primary: #4CAF50;
+  --color-primary-light: #81C784;
+  --color-primary-dark: #388E3C;
+  --color-secondary: #2196F3;
+  --color-secondary-light: #64B5F6;
+  --color-secondary-dark: #1976D2;
+  --color-bg: #F9FAFB;
+  --color-text: #1F2937;
+  --color-text-muted: #6B7280;
+
+  /* 字体 */
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Inter", "Roboto", system-ui, sans-serif;
+}
+
+/* 全局样式 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Inter", "Roboto", system-ui, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* 3D 翻转效果 - 兴趣矩阵 */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Blob 背景动画 */
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+.animate-blob {
+  animation: blob 7s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* 呼吸灯光圈 - 头像 */
+@keyframes breathe-glow {
+  0%, 100% { opacity: 0.6; box-shadow: 0 0 20px 4px rgba(76, 175, 80, 0.4); }
+  50% { opacity: 1; box-shadow: 0 0 30px 8px rgba(76, 175, 80, 0.6); }
+}
+
+.animate-breathe-glow {
+  animation: breathe-glow 3s ease-in-out infinite;
+}
+
+/* 自定义滚动条 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
